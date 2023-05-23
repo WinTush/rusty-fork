@@ -1,0 +1,94 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = [
+  "hatchling",
+]
+
+[project]
+name = "rustyfork"
+version = "0.1.0"
+description = "Website for the Rusty Fork, a local neighbourhood distro."
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Winston Kinoti", email = "prog.kinoti@gmail.com" },
+]
+requires-python = ">=3.10"
+dependencies = [
+  "argon2-cffi",
+  "Django",
+  "django-allauth",
+  "django-anymail",
+  "django-environ",
+  "django-extensions",
+  "django-htmx",
+  "django-improved-user==2.0a2",
+  "django-model-utils",
+  "django-render-block",
+  "gunicorn",
+  "hiredis",
+  "Pillow",
+  "psycopg2",
+  "redis",
+  "sentry-sdk",
+  "whitenoise",
+]
+[project.optional-dependencies]
+dev = [
+  "bandit",
+  "coverage",
+  "django-browser-reload",
+  "django-debug-toolbar",
+  "django-fastdev",
+  "django-stubs",
+  "ipython",
+  "mypy",
+  "poethepoet",
+  "pre-commit",
+  "pytest",
+  "pytest-django",
+  "pytest-sugar",
+  "pywatchman",
+  "Werkzeug",
+]
+[project.urls]
+[project.scripts]
+
+[tool.poe.tasks]
+RD = [
+    "rd",
+    "rm",
+    "mk",
+    "m",
+]
+
+[tool.poe.tasks.r]
+cmd = "python manage.py runserver --nostatic"
+help = "Start dev serve"
+
+[tool.poe.tasks.u]
+cmd = "python manage.py makesuperuser"
+help = "Create a new superuser using environment variables, look in your .env.template file"
+
+[tool.poe.tasks.m]
+cmd = "python manage.py migrate"
+help = "Apply migrations"
+
+[tool.poe.tasks.mk]
+cmd = "python manage.py makemigrations"
+help = "Make migrations"
+
+[tool.poe.tasks.rd]
+cmd = "python manage.py reset_db --noinput"
+help = "Delete and recreate your database"
+
+[tool.poe.tasks.d]
+cmd = "pip-compile -o requirements.txt pyproject.toml --resolver=backtracking"
+help = "Generate requirements.txt file"
+
+[tool.poe.tasks.dv]
+cmd = "pip-compile -o dev-requirements.txt --extra=dev pyproject.toml --resolver=backtracking"
+help = "Generate requirements.txt file"
+
+[tool.django-stubs]
+django_settings_module = "config.settings"
