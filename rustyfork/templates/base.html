@@ -13,7 +13,29 @@
     {% django_htmx_script %}
 </head>
 <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
-{% block content %}
-{% endblock content %}
+    <nav>
+      <ul>
+        <li>
+          <a href="#" class="secondary">
+            <img src="{% static "img/logo.png" %}" alt="Logo" width="40px" height="40px">
+            Rusty Fork
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Book</a></li>
+      </ul>
+    </nav>
+
+  <main>
+    {% block content %}{% endblock content %}
+  </main>
+
+  <footer>
+    <p>© 2023 Rusty Fork. All rights reserved.</p>
+  </footer>
 </body>
 </html>
