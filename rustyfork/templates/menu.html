@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="menu">
+    <h2>Menu</h2>
+    <p>At The Rusty Fork, we offer a variety of dishes to suit every taste and occasion. Our menu changes regularly, depending on the availability of seasonal ingredients and the inspiration of our chefs. Here are some of our current offerings:</p>
+
+    <!-- Breakfast menu -->
+    <article id="breakfast">
+        <h3>Breakfast</h3>
+        <p>Start your day with a classic breakfast plate, such as eggs, bacon, toast, and hash browns; or try something different, like our French toast with berry compote, our spinach and cheese omelet, or our granola bowl with yogurt and fruits.</p>
+        <ul>
+            <li>Eggs Benedict - $12.99</li>
+            <li>French Toast - $9.99</li>
+            <li>Spinach and Cheese Omelet - $10.99</li>
+            <li>Granola Bowl - $8.99</li>
+        </ul>
+    </article>
+
+    <!-- Lunch menu -->
+    <article id="lunch">
+        <h3>Lunch</h3>
+        <p>Whether you need a quick bite or a leisurely meal, we have you covered. Choose from our sandwiches, wraps, salads, soups, and quiches; or indulge in our burgers, pizzas, pastas, and stir-fries. Don't miss our soup and salad combo, or our lunch special of the day.</p>
+        <ul>
+            <li>Turkey Club Sandwich - $11.99</li>
+            <li>Chicken Caesar Wrap - $10.99</li>
+            <li>Fork Salad - $12.99</li>
+            <li>Tomato Basil Soup - $6.99</li>
+            <li>Mushroom Quiche - $9.99</li>
+            <li>Rusty Burger - $14.99</li>
+            <li>Margherita Pizza - $13.99</li>
+            <li>Spaghetti Bolognese - $15.99</li>
+            <li>Vegetable Stir-Fry - $12.99</li>
+        </ul>
+
+    </article>
+
+    <!-- Dinner menu -->
+    <article id="dinner">
+        <h3>Dinner</h3>
+        <p>Treat yourself to a satisfying dinner at The Rusty Fork. We have a range of dishes to please every palate, from steaks, chops, and seafood; to curries, stews, and casseroles. Try our house favorites, such as the Rusty Burger with fries and coleslaw; the Fork Salad with grilled chicken, bacon, avocado, and blue cheese dressing; or the Chocolate Cake with vanilla ice cream and caramel sauce.</p>
+
+        <!-- Steak menu -->
+        <section id="steak">
+            <h4>Steak</h4>
+            <ul>
+                <li>Ribeye Steak - $24.99</li>
+                <li>New York Strip Steak - $23.99</li>
+                <li>Filet Mignon - $26.99</li>
+
+                <!-- Steak options -->
+                <section id="steak-options">
+                    All steaks are served with your choice of:
+                    - Potato: mashed potatoes or baked potato
+                    - Vegetable: green beans or corn
+                    - Sauce: mushroom gravy or peppercorn sauce
+                </section>
+
+            </ul>
+
+        </section>
+
+        <!-- Chops menu -->
+        <section id="chops">
+            <h4>Chops</h4>
+            <ul>
+                <li>Pork Chops - $18.99</li>
+                <li>Lamb Chops - $21.99</li>
+
+                <!-- Chops options -->
+                <section id="chops-options">
+                    All chops are served with your choice of:
+                    - Rice: white rice or brown rice
+                    - Salad: garden salad or coleslaw
+                    - Sauce: apple sauce or mint sauce
+                </section>
+
+            </ul>
+
+        </section>
+
+        <!-- Seafood menu -->
+        <section id="seafood">
+            <h4>Seafood</h4>
+            <ul>
+                <li>Salmon Fillet - $19.99</li>
+                <li>Fish and Chips - $16.99</li>
+                <li>Shrimp Scampi - $18.99</li>
+
+                <!-- Seafood options -->
+                <section id="seafood-options">
+                    All seafood dishes are served with your choice of:
+                    - Pasta: spaghetti or penne
+                    - Bread: garlic bread or cheese bread
+                    - Sauce: lemon butter sauce or marinara sauce
+                </section>
+
+            </ul>
+
+        </section>
+  </article>
+</section>
+{% endblock content %}
