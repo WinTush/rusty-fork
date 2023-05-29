@@ -1,13 +1,14 @@
 {% load static %}
 {% load django_htmx %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <title>rustyfork</title>
+    <link rel="stylesheet" href="{% static "vendors/pico/pico.min.css" %}">
     <script defer src="{% static "vendors/htmx/htmx.min.js" %}"></script>
     {% django_htmx_script %}
 </head>
